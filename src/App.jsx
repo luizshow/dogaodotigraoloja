@@ -10,7 +10,7 @@ export default function App() {
   const pixName = "Eduardo Luiz Xavier Fontes";
   const pixBank = "Nubank";
 
-  const categories = ["Tradicionais", "Especiais", "Calabresa", "Lombo", "Frango Lanches", "Filé", "Diversos"];
+  const categories = ["Tradicionais", "Especiais", "Calabresa", "Lanches"];
   const [activeCategory, setActiveCategory] = useState("Tradicionais");
 
   const products = [
@@ -47,46 +47,32 @@ export default function App() {
     { id: 29, name: "Dogão Americano", category: "Calabresa", price: 21, image: `${base}images/tradicional-especial.jpg`, description: "Pão, presunto, mussarela, salsicha, ovo, milho e batata, ketchup, maionese e mostarda.", badge: "Americano" },
     { id: 30, name: "Dogão Americano Turbo", category: "Calabresa", price: 24, image: `${base}images/misto-luizshow-especial.jpg`, description: "Pão, presunto, mussarela, salsicha, calabresa, ovo, milho, batata, ketchup, maionese e mostarda.", badge: "Turbo" },
 
-    { id: 31, name: "X.lombo", category: "Lombo", price: 28, image: `${base}images/carne.jpg`, description: "Pão, lombo e queijo.", badge: "Lombo" },
-    { id: 32, name: "X.lombo salada", category: "Lombo", price: 29, image: `${base}images/carne.jpg`, description: "Pão, lombo, queijo e salada.", badge: "Lombo" },
-    { id: 33, name: "X.lombo egg", category: "Lombo", price: 29, image: `${base}images/carne.jpg`, description: "Pão, lombo, queijo e ovo.", badge: "Lombo" },
-    { id: 34, name: "X.lombo bacon", category: "Lombo", price: 30, image: `${base}images/carne.jpg`, description: "Pão, lombo, queijo e bacon.", badge: "Lombo" },
-    { id: 35, name: "X.lombo salada egg", category: "Lombo", price: 31, image: `${base}images/carne-especial.jpg`, description: "Pão, lombo, queijo, ovo e salada.", badge: "Lombo" },
-    { id: 36, name: "X.lombo bacon egg", category: "Lombo", price: 31, image: `${base}images/carne-especial.jpg`, description: "Pão, lombo, queijo, ovo e bacon.", badge: "Lombo" },
-    { id: 37, name: "X.lombo bacon salada", category: "Lombo", price: 32, image: `${base}images/carne-especial.jpg`, description: "Pão, lombo, queijo, bacon e salada.", badge: "Lombo" },
-    { id: 38, name: "X.lombo tudo", category: "Lombo", price: 38, image: `${base}images/o-brabo-especial.jpg`, description: "Pão, lombo, queijo, ovo, salsinha, bacon, salada e presunto.", badge: "Lombo Tudo" },
+    { id: 31, name: "X.lombo", category: "Lanches", price: 28, image: `${base}images/carne.jpg`, description: "Pão, lombo e queijo.", badge: "Lanche" },
+    { id: 32, name: "X.lombo salada", category: "Lanches", price: 29, image: `${base}images/carne.jpg`, description: "Pão, lombo, queijo e salada.", badge: "Lanche" },
+    { id: 33, name: "X.lombo egg", category: "Lanches", price: 29, image: `${base}images/carne.jpg`, description: "Pão, lombo, queijo e ovo.", badge: "Lanche" },
+    { id: 34, name: "X.lombo bacon", category: "Lanches", price: 30, image: `${base}images/carne.jpg`, description: "Pão, lombo, queijo e bacon.", badge: "Lanche" },
+    { id: 35, name: "X.lombo salada egg", category: "Lanches", price: 31, image: `${base}images/carne-especial.jpg`, description: "Pão, lombo, queijo, ovo e salada.", badge: "Lanche" },
+    { id: 36, name: "X.lombo bacon egg", category: "Lanches", price: 31, image: `${base}images/carne-especial.jpg`, description: "Pão, lombo, queijo, ovo e bacon.", badge: "Lanche" },
+    { id: 37, name: "X.lombo bacon salada", category: "Lanches", price: 32, image: `${base}images/carne-especial.jpg`, description: "Pão, lombo, queijo, bacon e salada.", badge: "Lanche" },
+    { id: 38, name: "X.lombo tudo", category: "Lanches", price: 38, image: `${base}images/o-brabo-especial.jpg`, description: "Pão, lombo, queijo, ovo, salsinha, bacon, salada e presunto.", badge: "Especial" },
 
-    { id: 39, name: "X.frango", category: "Frango Lanches", price: 28, image: `${base}images/frango.jpg`, description: "Pão, frango e queijo.", badge: "Frango" },
-    { id: 40, name: "X.frango salada", category: "Frango Lanches", price: 29, image: `${base}images/frango.jpg`, description: "Pão, frango, queijo e salada.", badge: "Frango" },
-    { id: 41, name: "X.frango egg", category: "Frango Lanches", price: 29, image: `${base}images/frango.jpg`, description: "Pão, frango, queijo e ovo.", badge: "Frango" },
-    { id: 42, name: "X.frango bacon", category: "Frango Lanches", price: 30, image: `${base}images/frango.jpg`, description: "Pão, frango, queijo e bacon.", badge: "Frango" },
-    { id: 43, name: "X.frango salada egg", category: "Frango Lanches", price: 31, image: `${base}images/frango-especial.jpg`, description: "Pão, frango, queijo, ovo e salada.", badge: "Frango" },
-    { id: 44, name: "X.frango bacon egg", category: "Frango Lanches", price: 31, image: `${base}images/frango-especial.jpg`, description: "Pão, frango, queijo, ovo e bacon.", badge: "Frango" },
-    { id: 45, name: "X.frango bacon salada", category: "Frango Lanches", price: 32, image: `${base}images/frango-especial.jpg`, description: "Pão, frango, queijo, bacon e salada.", badge: "Frango" },
-    { id: 46, name: "X.frango tudo", category: "Frango Lanches", price: 38, image: `${base}images/o-brabo.jpg`, description: "Pão, frango, queijo, ovo, salsinha, bacon, salada e presunto.", badge: "Frango Tudo" },
+    { id: 39, name: "X.frango", category: "Lanches", price: 28, image: `${base}images/frango.jpg`, description: "Pão, frango e queijo.", badge: "Lanche" },
+    { id: 40, name: "X.frango salada", category: "Lanches", price: 29, image: `${base}images/frango.jpg`, description: "Pão, frango, queijo e salada.", badge: "Lanche" },
+    { id: 41, name: "X.frango egg", category: "Lanches", price: 29, image: `${base}images/frango.jpg`, description: "Pão, frango, queijo e ovo.", badge: "Lanche" },
+    { id: 42, name: "X.frango bacon", category: "Lanches", price: 30, image: `${base}images/frango.jpg`, description: "Pão, frango, queijo e bacon.", badge: "Lanche" },
+    { id: 43, name: "X.frango salada egg", category: "Lanches", price: 31, image: `${base}images/frango-especial.jpg`, description: "Pão, frango, queijo, ovo e salada.", badge: "Lanche" },
+    { id: 44, name: "X.frango bacon egg", category: "Lanches", price: 31, image: `${base}images/frango-especial.jpg`, description: "Pão, frango, queijo, ovo e bacon.", badge: "Lanche" },
+    { id: 45, name: "X.frango bacon salada", category: "Lanches", price: 32, image: `${base}images/frango-especial.jpg`, description: "Pão, frango, queijo, bacon e salada.", badge: "Lanche" },
+    { id: 46, name: "X.frango tudo", category: "Lanches", price: 38, image: `${base}images/o-brabo.jpg`, description: "Pão, frango, queijo, ovo, salsinha, bacon, salada e presunto.", badge: "Especial" },
 
-    { id: 47, name: "X.filé", category: "Filé", price: 28, image: `${base}images/misto-luizshow.jpg`, description: "Pão, filé e queijo.", badge: "Filé" },
-    { id: 48, name: "X.filé salada", category: "Filé", price: 29, image: `${base}images/misto-luizshow.jpg`, description: "Pão, filé, queijo e salada.", badge: "Filé" },
-    { id: 49, name: "X.filé egg", category: "Filé", price: 29, image: `${base}images/misto-luizshow.jpg`, description: "Pão, filé, queijo e ovo.", badge: "Filé" },
-    { id: 50, name: "X.filé bacon", category: "Filé", price: 30, image: `${base}images/misto-luizshow.jpg`, description: "Pão, filé, queijo e bacon.", badge: "Filé" },
-    { id: 51, name: "X.filé salada egg", category: "Filé", price: 31, image: `${base}images/misto-luizshow-especial.jpg`, description: "Pão, filé, queijo, ovo e salada.", badge: "Filé" },
-    { id: 52, name: "X.filé bacon egg", category: "Filé", price: 31, image: `${base}images/misto-luizshow-especial.jpg`, description: "Pão, filé, queijo, ovo e bacon.", badge: "Filé" },
-    { id: 53, name: "X.filé bacon salada", category: "Filé", price: 32, image: `${base}images/misto-luizshow-especial.jpg`, description: "Pão, filé, queijo, bacon e salada.", badge: "Filé" },
-    { id: 54, name: "X.filé tudo", category: "Filé", price: 38, image: `${base}images/o-brabo-especial.jpg`, description: "Pão, filé, queijo, ovo, salsinha, bacon, presunto e salada.", badge: "Filé Tudo" },
-
-    { id: 55, name: "X.hambúrguer", category: "Diversos", price: 28, image: `${base}images/tradicional.jpg`, description: "Pão, hambúrguer e queijo.", badge: "Diversos" },
-    { id: 56, name: "X.hambúrguer salada", category: "Diversos", price: 29, image: `${base}images/tradicional.jpg`, description: "Pão, hambúrguer, queijo e salada.", badge: "Diversos" },
-    { id: 57, name: "X.hambúrguer egg", category: "Diversos", price: 29, image: `${base}images/tradicional.jpg`, description: "Pão, hambúrguer, queijo e ovo.", badge: "Diversos" },
-    { id: 58, name: "X.hambúrguer bacon", category: "Diversos", price: 30, image: `${base}images/tradicional.jpg`, description: "Pão, hambúrguer, queijo e bacon.", badge: "Diversos" },
-    { id: 59, name: "X.hambúrguer salada egg", category: "Diversos", price: 31, image: `${base}images/tradicional-especial.jpg`, description: "Pão, hambúrguer, queijo, ovo e salada.", badge: "Diversos" },
-    { id: 60, name: "X.hambúrguer bacon egg", category: "Diversos", price: 31, image: `${base}images/tradicional-especial.jpg`, description: "Pão, hambúrguer, queijo, ovo e bacon.", badge: "Diversos" },
-    { id: 61, name: "X.hambúrguer bacon salada", category: "Diversos", price: 32, image: `${base}images/tradicional-especial.jpg`, description: "Pão, hambúrguer, queijo, bacon e salada.", badge: "Diversos" },
-    { id: 62, name: "X.hambúrguer tudo", category: "Diversos", price: 38, image: `${base}images/o-brabo.jpg`, description: "Pão, hambúrguer, queijo, ovo, salsinha, bacon e salada.", badge: "Diversos" },
-    { id: 63, name: "Hot dog simples", category: "Diversos", price: 20, image: `${base}images/tradicional.jpg`, description: "Pão, salsicha, milho, batata e salada.", badge: "Diversos" },
-    { id: 64, name: "Hot dog especial", category: "Diversos", price: 24, image: `${base}images/tradicional-especial.jpg`, description: "Pão, salsicha, ovo, presunto, mussarela, milho, batata e salada.", badge: "Diversos" },
-    { id: 65, name: "Misto quente", category: "Diversos", price: 27, image: `${base}images/misto-luizshow.jpg`, description: "Pão, presunto e mussarela.", badge: "Diversos" },
-    { id: 66, name: "Bacar", category: "Diversos", price: 27, image: `${base}images/misto-luizshow-especial.jpg`, description: "Pão, presunto, mussarela, batata, milho, ovo e salada.", badge: "Diversos" },
-    { id: 67, name: "Big Tiger", category: "Diversos", price: 49, image: `${base}images/o-brabo-especial.jpg`, description: "Pão, hambúrguer, frango, lombo, salsinha, bacon, ovo, queijo, presunto e salada.", badge: "Big Tiger" },
+    { id: 47, name: "X.filé", category: "Lanches", price: 28, image: `${base}images/misto-luizshow.jpg`, description: "Pão, filé e queijo.", badge: "Lanche" },
+    { id: 48, name: "X.filé salada", category: "Lanches", price: 29, image: `${base}images/misto-luizshow.jpg`, description: "Pão, filé, queijo e salada.", badge: "Lanche" },
+    { id: 49, name: "X.filé egg", category: "Lanches", price: 29, image: `${base}images/misto-luizshow.jpg`, description: "Pão, filé, queijo e ovo.", badge: "Lanche" },
+    { id: 50, name: "X.filé bacon", category: "Lanches", price: 30, image: `${base}images/misto-luizshow.jpg`, description: "Pão, filé, queijo e bacon.", badge: "Lanche" },
+    { id: 51, name: "X.filé salada egg", category: "Lanches", price: 31, image: `${base}images/misto-luizshow-especial.jpg`, description: "Pão, filé, queijo, ovo e salada.", badge: "Lanche" },
+    { id: 52, name: "X.filé bacon egg", category: "Lanches", price: 31, image: `${base}images/misto-luizshow-especial.jpg`, description: "Pão, filé, queijo, ovo e bacon.", badge: "Lanche" },
+    { id: 53, name: "X.filé bacon salada", category: "Lanches", price: 32, image: `${base}images/misto-luizshow-especial.jpg`, description: "Pão, filé, queijo, bacon e salada.", badge: "Lanche" },
+    { id: 54, name: "X.filé tudo", category: "Lanches", price: 38, image: `${base}images/o-brabo-especial.jpg`, description: "Pão, filé, queijo, ovo, salsinha, bacon, presunto e salada.", badge: "Especial" },
   ];
 
   const [cart, setCart] = useState([]);
@@ -101,24 +87,16 @@ export default function App() {
   const featured = products[27];
   const filteredProducts = products.filter((product) => product.category === activeCategory);
 
-  const categoryLabel = (category) => ({
-    "Tradicionais": "Cachorro-quente Tradicional",
-    "Especiais": "Cachorro-quente Especial",
-    "Calabresa": "Cachorro-quente de Calabresa",
-    "Lombo": "Catálogo de Lombo",
-    "Frango Lanches": "Catálogo de Frango",
-    "Filé": "Catálogo de Filé",
-    "Diversos": "Catálogo Diversos",
-  }[category] || category);
-
   const addToCart = (product) => {
     const extras = [];
     if (window.confirm(`Deseja adicionar bacon ao ${product.name} por R$ 3,00?`)) extras.push({ name: "Bacon", price: 3 });
     if (window.confirm(`Deseja adicionar cheddar ao ${product.name} por R$ 5,00?`)) extras.push({ name: "Cheddar", price: 5 });
-    const extrasKey = extras.length ? extras.map((extra) => extra.name).join(", ") : "Sem adicionais";
+    const extrasKey = extras.map((extra) => extra.name).join(", ") || "Sem adicionais";
 
     setCart((currentCart) => {
-      const existingItem = currentCart.find((item) => item.id === product.id && item.extrasKey === extrasKey);
+      const existingItem = currentCart.find(
+        (item) => item.id === product.id && item.extrasKey === extrasKey
+      );
       if (existingItem) {
         return currentCart.map((item) =>
           item.id === product.id && item.extrasKey === extrasKey
@@ -210,7 +188,7 @@ export default function App() {
     }).join("\n");
 
     const moneyLine = paymentMethod === "dinheiro" ? `\nTroco para: ${changeFor ? `R$ ${changeFor}` : "Não informado"}` : "";
-    const pixLine = paymentMethod === "pix" ? `\nPagamento por Pix. Chave: ${pixKey} | Nome: ${pixName} | Banco: ${pixBank}. Envie o comprovante para este mesmo número.` : "";
+    const pixLine = paymentMethod === "pix" ? "\nPagamento por Pix. Chave: 067.094.116-64 | Nome: Eduardo Luiz Xavier Fontes | Banco: Nubank. Envie o comprovante para este mesmo número." : "";
 
     return (
       `Olá, Dogão do Tigrão! Quero fazer este pedido:\n\n` +
@@ -240,33 +218,70 @@ export default function App() {
       <section className="relative overflow-hidden bg-gradient-to-br from-amber-500 via-orange-500 to-red-600">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative mx-auto max-w-7xl px-6 pt-6 md:px-10">
-          <div className="mb-6 flex items-center justify-between rounded-[28px] border border-white/15 bg-neutral-950/35 px-5 py-4 shadow-xl backdrop-blur md:px-7 gap-4">
+          <div className="mb-6 flex items-center justify-between rounded-[28px] border border-white/15 bg-neutral-950/35 px-5 py-4 shadow-xl backdrop-blur md:px-7">
             <div className="flex items-center gap-4">
-              <div className="flex h-28 w-28 items-center justify-center overflow-hidden rounded-3xl border border-white/15 bg-white/10 p-2 md:h-36 md:w-36 shrink-0">
-                <img src={logoImage} alt="Logo Dogão do Tigrão" className="h-full w-full object-contain scale-105" onError={(e) => { e.currentTarget.style.display = "none"; const fallback = e.currentTarget.nextElementSibling; if (fallback) fallback.style.display = "flex"; }} />
-                <div style={{ display: "none" }} className="h-full w-full items-center justify-center bg-orange-500 text-2xl font-black text-white">DT</div>
+              <div className="flex h-28 w-28 items-center justify-center overflow-hidden rounded-3xl border border-white/15 bg-white/10 p-2 md:h-32 md:w-32">
+                <img
+                  src={logoImage}
+                  alt="Logo Dogão do Tigrão"
+                  className="h-full w-full object-contain"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                    const fallback = e.currentTarget.nextElementSibling;
+                    if (fallback) fallback.style.display = "flex";
+                  }}
+                />
+                <div
+                  style={{ display: "none" }}
+                  className="h-full w-full items-center justify-center bg-orange-500 text-2xl font-black text-white"
+                >
+                  DT
+                </div>
               </div>
               <div>
                 <h2 className="text-2xl font-black text-white md:text-3xl">Dogão do Tigrão</h2>
               </div>
             </div>
-            <a href="#cart-panel" className="rounded-2xl bg-white/10 px-4 py-3 text-sm font-bold text-white transition hover:bg-white/20 shrink-0">Ver carrinho</a>
+            <a href="#cart-panel" className="rounded-2xl bg-white/10 px-4 py-3 text-sm font-bold text-white transition hover:bg-white/20">
+              Ver carrinho
+            </a>
           </div>
         </div>
 
         <div className="relative mx-auto grid max-w-7xl gap-10 px-6 pb-10 md:grid-cols-2 md:px-10 md:pb-16">
           <div className="flex flex-col justify-center">
-            <div className="mb-4 inline-flex w-fit items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm backdrop-blur">🌭 Dogão do Tigrão • Delivery Profissional</div>
-            <h1 className="max-w-xl text-4xl font-black leading-tight md:text-6xl">O melhor cachorro quente de costela da cidade.</h1>
-            <p className="mt-4 max-w-xl text-base text-white/90 md:text-lg">Agora com opções tradicionais, especiais, calabresa e catálogos separados de lanches.</p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a href="#cardapio" className="rounded-2xl bg-neutral-950 px-6 py-3 font-semibold text-white shadow-2xl transition hover:scale-[1.02]">Ver cardápio</a>
-              <a href="#cart-panel" className="rounded-2xl border border-white/30 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur transition hover:bg-white/20">Ver carrinho</a>
+            <div className="mb-4 inline-flex w-fit items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm backdrop-blur">
+              🌭 Dogão do Tigrão • Delivery Profissional
             </div>
+            <h1 className="max-w-xl text-4xl font-black leading-tight md:text-6xl">
+              O melhor cachorro quente de costela da cidade.
+            </h1>
+            <p className="mt-4 max-w-xl text-base text-white/90 md:text-lg">
+              Agora com opções tradicionais, especiais, calabresa e também catálogo de lanches.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a href="#cardapio" className="rounded-2xl bg-neutral-950 px-6 py-3 font-semibold text-white shadow-2xl transition hover:scale-[1.02]">
+                Ver cardápio
+              </a>
+              <a href="#cart-panel" className="rounded-2xl border border-white/30 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur transition hover:bg-white/20">
+                Ver carrinho
+              </a>
+            </div>
+
             <div className="mt-8 grid max-w-lg grid-cols-3 gap-3">
-              <div className="rounded-2xl bg-black/20 p-4 backdrop-blur"><div className="text-2xl font-black">67</div><div className="text-sm text-white/80">Opções no cardápio</div></div>
-              <div className="rounded-2xl bg-black/20 p-4 backdrop-blur"><div className="text-2xl font-black">7</div><div className="text-sm text-white/80">Catálogos</div></div>
-              <div className="rounded-2xl bg-black/20 p-4 backdrop-blur"><div className="text-2xl font-black">{cartCount}</div><div className="text-sm text-white/80">Itens no carrinho</div></div>
+              <div className="rounded-2xl bg-black/20 p-4 backdrop-blur">
+                <div className="text-2xl font-black">54</div>
+                <div className="text-sm text-white/80">Opções no cardápio</div>
+              </div>
+              <div className="rounded-2xl bg-black/20 p-4 backdrop-blur">
+                <div className="text-2xl font-black">4</div>
+                <div className="text-sm text-white/80">Categorias</div>
+              </div>
+              <div className="rounded-2xl bg-black/20 p-4 backdrop-blur">
+                <div className="text-2xl font-black">{cartCount}</div>
+                <div className="text-sm text-white/80">Itens no carrinho</div>
+              </div>
             </div>
           </div>
 
@@ -274,13 +289,30 @@ export default function App() {
             <div className="w-full max-w-md rounded-[32px] border border-white/15 bg-neutral-950/80 p-4 shadow-2xl backdrop-blur-xl">
               <div className="rounded-[28px] bg-neutral-900 p-4">
                 <div className="mb-4 flex items-center justify-between gap-4">
-                  <div><p className="text-sm text-white/60">Destaque da casa</p><h3 className="text-lg font-bold">{featured.name}</h3></div>
-                  <div className="rounded-2xl bg-orange-500 px-4 py-2 text-sm font-bold">R$ {featured.price}</div>
+                  <div>
+                    <p className="text-sm text-white/60">Destaque da casa</p>
+                    <h3 className="text-lg font-bold">{featured.name}</h3>
+                  </div>
+                  <div className="rounded-2xl bg-orange-500 px-4 py-2 text-sm font-bold">
+                    R$ {featured.price}
+                  </div>
                 </div>
-                <img src={featured.image} alt={featured.name} className="h-64 w-full rounded-[24px] object-cover" onError={imageFallback} />
+
+                <img
+                  src={featured.image}
+                  alt={featured.name}
+                  className="h-64 w-full rounded-[24px] object-cover"
+                  onError={imageFallback}
+                />
+
                 <div className="mt-4 rounded-[24px] bg-neutral-800 p-4">
                   <p className="text-sm text-white/75">{featured.description}</p>
-                  <button onClick={() => addToCart(featured)} className="mt-4 block w-full rounded-2xl bg-orange-500 py-3 text-center font-bold transition hover:brightness-110">Adicionar ao carrinho</button>
+                  <button
+                    onClick={() => addToCart(featured)}
+                    className="mt-4 block w-full rounded-2xl bg-orange-500 py-3 text-center font-bold transition hover:brightness-110"
+                  >
+                    Adicionar ao carrinho
+                  </button>
                 </div>
               </div>
             </div>
@@ -290,9 +322,18 @@ export default function App() {
 
       <section className="mx-auto max-w-7xl px-6 py-8 md:px-10">
         <div className="grid gap-4 md:grid-cols-3">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur"><h3 className="text-lg font-bold">WhatsApp oficial</h3><p className="mt-2 text-sm text-white/70">(34) 99978-3791</p></div>
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur"><h3 className="text-lg font-bold">Seg a Qui</h3><p className="mt-2 text-sm text-white/70">19h às 23h</p></div>
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur"><h3 className="text-lg font-bold">Sex a Dom</h3><p className="mt-2 text-sm text-white/70">19h às 00:00</p></div>
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur">
+            <h3 className="text-lg font-bold">WhatsApp oficial</h3>
+            <p className="mt-2 text-sm text-white/70">(34) 99978-3791</p>
+          </div>
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur">
+            <h3 className="text-lg font-bold">Seg a Qui</h3>
+            <p className="mt-2 text-sm text-white/70">19h às 23h</p>
+          </div>
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur">
+            <h3 className="text-lg font-bold">Sex a Dom</h3>
+            <p className="mt-2 text-sm text-white/70">19h às 00:00</p>
+          </div>
         </div>
       </section>
 
@@ -300,33 +341,69 @@ export default function App() {
         <div className="mb-8">
           <h2 className="text-3xl font-black">Nosso cardápio</h2>
           <p className="mt-2 text-white/60">Escolha a categoria do seu lanche.</p>
-          <div className="mt-4 rounded-2xl border border-green-500/20 bg-green-500/10 p-4 text-sm text-white/80">Adicionais disponíveis em qualquer lanche: <strong>Bacon +R$ 3,00</strong> e <strong>Cheddar +R$ 5,00</strong>.</div>
+          <div className="mt-4 rounded-2xl border border-green-500/20 bg-green-500/10 p-4 text-sm text-white/80">
+            Adicionais disponíveis em qualquer lanche: <strong>Bacon +R$ 3,00</strong> e <strong>Cheddar +R$ 5,00</strong>.
+          </div>
         </div>
 
         <div className="mb-8 flex flex-wrap gap-3">
           {categories.map((category) => (
-            <button key={category} onClick={() => setActiveCategory(category)} className={`rounded-2xl px-5 py-3 font-bold transition ${activeCategory === category ? "bg-orange-500 text-white" : "border border-white/10 bg-white/5 text-white/80 hover:border-white/20"}`}>
-              {categoryLabel(category)}
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`rounded-2xl px-5 py-3 font-bold transition ${
+                activeCategory === category
+                  ? "bg-orange-500 text-white"
+                  : "border border-white/10 bg-white/5 text-white/80 hover:border-white/20"
+              }`}
+            >
+              {category === "Tradicionais" ? "Cachorro-quente Tradicional" : category === "Especiais" ? "Cachorro-quente Especial" : category === "Calabresa" ? "Cachorro-quente de Calabresa" : "Catálogo de Lanches"}
             </button>
           ))}
         </div>
 
         <div>
-          <div className="mb-5 flex items-center gap-3"><div className="h-3 w-3 rounded-full bg-orange-500" /><h3 className="text-2xl font-black">{categoryLabel(activeCategory)}</h3></div>
+          <div className="mb-5 flex items-center gap-3">
+            <div className="h-3 w-3 rounded-full bg-orange-500" />
+            <h3 className="text-2xl font-black">
+              {activeCategory === "Tradicionais" ? "Cachorro-quente Tradicional" : activeCategory === "Especiais" ? "Cachorro-quente Especial" : activeCategory === "Calabresa" ? "Cachorro-quente de Calabresa" : "Catálogo de Lanches"}
+            </h3>
+          </div>
+
           <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
             {filteredProducts.map((product) => (
-              <div key={product.id} className="group overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-xl transition hover:-translate-y-1 hover:border-orange-400/50">
+              <div
+                key={product.id}
+                className="group overflow-hidden rounded-[28px] border border-white/10 bg-white/5 shadow-xl transition hover:-translate-y-1 hover:border-orange-400/50"
+              >
                 <div className="relative">
-                  <img src={product.image} alt={product.name} className="h-56 w-full object-cover transition duration-300 group-hover:scale-105" onError={imageFallback} />
-                  <span className="absolute left-4 top-4 rounded-full bg-orange-500 px-3 py-1 text-xs font-bold">{product.badge}</span>
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="h-56 w-full object-cover transition duration-300 group-hover:scale-105"
+                    onError={imageFallback}
+                  />
+                  <span className="absolute left-4 top-4 rounded-full bg-orange-500 px-3 py-1 text-xs font-bold">
+                    {product.badge}
+                  </span>
                 </div>
                 <div className="p-5">
                   <div className="flex items-start justify-between gap-4">
-                    <div><p className="text-xs uppercase tracking-[0.2em] text-orange-400">{product.category}</p><h3 className="mt-1 text-xl font-black">{product.name}</h3></div>
-                    <div className="rounded-2xl bg-neutral-900 px-3 py-2 text-sm font-bold">R$ {product.price}</div>
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.2em] text-orange-400">{product.category}</p>
+                      <h3 className="mt-1 text-xl font-black">{product.name}</h3>
+                    </div>
+                    <div className="rounded-2xl bg-neutral-900 px-3 py-2 text-sm font-bold">
+                      R$ {product.price}
+                    </div>
                   </div>
                   <p className="mt-3 text-sm text-white/65">{product.description}</p>
-                  <button onClick={() => addToCart(product)} className="mt-5 block w-full rounded-2xl bg-orange-500 py-3 text-center font-bold transition hover:brightness-110">Adicionar ao carrinho</button>
+                  <button
+                    onClick={() => addToCart(product)}
+                    className="mt-5 block w-full rounded-2xl bg-orange-500 py-3 text-center font-bold transition hover:brightness-110"
+                  >
+                    Adicionar ao carrinho
+                  </button>
                 </div>
               </div>
             ))}
@@ -352,14 +429,20 @@ export default function App() {
               <h3 className="text-lg font-bold">Forma de pagamento</h3>
               <div className="mt-3 grid gap-3 md:grid-cols-3">
                 {[{ value: "pix", label: "Pix" }, { value: "dinheiro", label: "Dinheiro" }, { value: "cartao", label: "Cartão" }].map((option) => (
-                  <button key={option.value} onClick={() => setPaymentMethod(option.value)} className={`rounded-2xl border px-4 py-3 font-bold transition ${paymentMethod === option.value ? "border-orange-500 bg-orange-500 text-white" : "border-white/10 bg-neutral-900 text-white/75 hover:border-white/20"}`}>
+                  <button
+                    key={option.value}
+                    onClick={() => setPaymentMethod(option.value)}
+                    className={`rounded-2xl border px-4 py-3 font-bold transition ${paymentMethod === option.value ? "border-orange-500 bg-orange-500 text-white" : "border-white/10 bg-neutral-900 text-white/75 hover:border-white/20"}`}
+                  >
                     {option.label}
                   </button>
                 ))}
               </div>
 
               {paymentMethod === "dinheiro" && (
-                <div className="mt-4"><input value={changeFor} onChange={(e) => setChangeFor(e.target.value)} placeholder="Troco para quanto? Ex: 50,00" className="w-full rounded-2xl border border-white/10 bg-neutral-900 px-4 py-3 outline-none placeholder:text-white/35" /></div>
+                <div className="mt-4">
+                  <input value={changeFor} onChange={(e) => setChangeFor(e.target.value)} placeholder="Troco para quanto? Ex: 50,00" className="w-full rounded-2xl border border-white/10 bg-neutral-900 px-4 py-3 outline-none placeholder:text-white/35" />
+                </div>
               )}
 
               {paymentMethod === "pix" && (
@@ -373,22 +456,32 @@ export default function App() {
               )}
             </div>
 
-            <div className="mt-6"><textarea value={customerNotes} onChange={(e) => setCustomerNotes(e.target.value)} placeholder="Observações do pedido" rows={4} className="w-full rounded-2xl border border-white/10 bg-neutral-900 px-4 py-3 outline-none placeholder:text-white/35" /></div>
+            <div className="mt-6">
+              <textarea value={customerNotes} onChange={(e) => setCustomerNotes(e.target.value)} placeholder="Observações do pedido" rows={4} className="w-full rounded-2xl border border-white/10 bg-neutral-900 px-4 py-3 outline-none placeholder:text-white/35" />
+            </div>
           </div>
 
           <aside id="cart-panel" className="rounded-[32px] border border-white/10 bg-gradient-to-b from-white/8 to-white/5 p-6 shadow-2xl backdrop-blur h-fit lg:sticky lg:top-6">
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
-              <div><h3 className="text-2xl font-black">Seu carrinho</h3><p className="text-sm text-white/60">Confira antes de enviar</p></div>
-              <div className="rounded-2xl bg-orange-500 px-3 py-2 text-sm font-bold">{cartCount} item{cartCount !== 1 ? "s" : ""}</div>
+              <div>
+                <h3 className="text-2xl font-black">Seu carrinho</h3>
+                <p className="text-sm text-white/60">Confira antes de enviar</p>
+              </div>
+              <div className="rounded-2xl bg-orange-500 px-3 py-2 text-sm font-bold">
+                {cartCount} item{cartCount !== 1 ? "s" : ""}
+              </div>
             </div>
 
             <div className="mt-5 space-y-4">
               {cart.length === 0 ? (
-                <div className="rounded-2xl border border-dashed border-white/10 bg-neutral-900/50 p-5 text-sm text-white/55">Seu carrinho está vazio.</div>
+                <div className="rounded-2xl border border-dashed border-white/10 bg-neutral-900/50 p-5 text-sm text-white/55">
+                  Seu carrinho está vazio.
+                </div>
               ) : (
                 cart.map((item) => {
                   const extrasTotal = (item.extras || []).reduce((sum, extra) => sum + extra.price, 0);
                   const itemTotal = (item.price + extrasTotal) * item.quantity;
+
                   return (
                     <div key={`${item.id}-${item.extrasKey}`} className="rounded-2xl bg-neutral-900/80 p-4">
                       <div className="flex items-start justify-between gap-3">
@@ -398,26 +491,47 @@ export default function App() {
                             <p>R$ {item.price.toFixed(2).replace(".", ",")} cada</p>
                             {!!item.extras?.length && (
                               <div className="mt-2 space-y-2">
-                                <p>Adicionais: {item.extras.map((extra) => `${extra.name} (+R$ ${extra.price.toFixed(2).replace(".", ",")})`).join(", ")}</p>
+                                <p>
+                                  Adicionais: {item.extras.map((extra) => `${extra.name} (+R$ ${extra.price.toFixed(2).replace(".", ",")})`).join(", ")}
+                                </p>
                                 <div className="flex flex-wrap gap-2">
                                   {item.extras.map((extra) => (
-                                    <button key={extra.name} onClick={() => removeExtraFromItem(item.id, item.extrasKey, extra.name)} className="rounded-full border border-red-400/30 bg-red-400/10 px-3 py-1 text-xs font-bold text-red-300">Remover {extra.name}</button>
+                                    <button
+                                      key={extra.name}
+                                      onClick={() => removeExtraFromItem(item.id, item.extrasKey, extra.name)}
+                                      className="rounded-full border border-red-400/30 bg-red-400/10 px-3 py-1 text-xs font-bold text-red-300"
+                                    >
+                                      Remover {extra.name}
+                                    </button>
                                   ))}
                                 </div>
                               </div>
                             )}
                             <div className="mt-2 flex flex-wrap gap-2">
                               {!(item.extras || []).some((extra) => extra.name === "Bacon") && (
-                                <button onClick={() => addExtraToItem(item.id, item.extrasKey, "Bacon", 3)} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-white/80">+ Bacon</button>
+                                <button
+                                  onClick={() => addExtraToItem(item.id, item.extrasKey, "Bacon", 3)}
+                                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-white/80"
+                                >
+                                  + Bacon
+                                </button>
                               )}
                               {!(item.extras || []).some((extra) => extra.name === "Cheddar") && (
-                                <button onClick={() => addExtraToItem(item.id, item.extrasKey, "Cheddar", 5)} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-white/80">+ Cheddar</button>
+                                <button
+                                  onClick={() => addExtraToItem(item.id, item.extrasKey, "Cheddar", 5)}
+                                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-bold text-white/80"
+                                >
+                                  + Cheddar
+                                </button>
                               )}
                             </div>
                           </div>
                         </div>
-                        <button onClick={() => removeFromCart(item.id, item.extrasKey)} className="text-sm font-bold text-red-400">Remover</button>
+                        <button onClick={() => removeFromCart(item.id, item.extrasKey)} className="text-sm font-bold text-red-400">
+                          Remover
+                        </button>
                       </div>
+
                       <div className="mt-4 flex items-center justify-between">
                         <div className="flex items-center gap-3">
                           <button onClick={() => decreaseQuantity(item.id, item.extrasKey)} className="h-9 w-9 rounded-full bg-white/10 text-lg font-bold">-</button>
@@ -433,14 +547,30 @@ export default function App() {
             </div>
 
             <div className="mt-6 space-y-3 border-t border-white/10 pt-4 text-sm">
-              <div className="flex items-center justify-between text-white/70"><span>Subtotal</span><span>R$ {subtotal.toFixed(2).replace(".", ",")}</span></div>
-              <div className="flex items-center justify-between text-white/70"><span>Taxa de entrega</span><span>R$ {deliveryFee.toFixed(2).replace(".", ",")}</span></div>
-              <div className="rounded-2xl border border-yellow-500/20 bg-yellow-500/10 p-3 text-xs leading-relaxed text-white/75">Taxa de entrega inicial de R$ 4,00. Esse valor pode alterar dependendo do endereço, e nós te avisaremos no WhatsApp caso a taxa fique maior que R$ 4,00.</div>
-              <div className="flex items-center justify-between text-white/70"><span>Pagamento</span><span>{paymentLabel}</span></div>
-              <div className="flex items-center justify-between text-lg font-black"><span>Total</span><span>R$ {total.toFixed(2).replace(".", ",")}</span></div>
+              <div className="flex items-center justify-between text-white/70">
+                <span>Subtotal</span>
+                <span>R$ {subtotal.toFixed(2).replace(".", ",")}</span>
+              </div>
+              <div className="flex items-center justify-between text-white/70">
+                <span>Taxa de entrega</span>
+                <span>R$ {deliveryFee.toFixed(2).replace(".", ",")}</span>
+              </div>
+              <div className="rounded-2xl border border-yellow-500/20 bg-yellow-500/10 p-3 text-xs leading-relaxed text-white/75">
+                Taxa de entrega inicial de R$ 4,00. Esse valor pode alterar dependendo do endereço, e nós te avisaremos no WhatsApp caso a taxa fique maior que R$ 4,00.
+              </div>
+              <div className="flex items-center justify-between text-white/70">
+                <span>Pagamento</span>
+                <span>{paymentLabel}</span>
+              </div>
+              <div className="flex items-center justify-between text-lg font-black">
+                <span>Total</span>
+                <span>R$ {total.toFixed(2).replace(".", ",")}</span>
+              </div>
             </div>
 
-            <button onClick={handleCheckout} className="mt-6 w-full rounded-2xl bg-green-500 py-4 text-base font-black text-white transition hover:scale-[1.01]">Finalizar pedido no WhatsApp</button>
+            <button onClick={handleCheckout} className="mt-6 w-full rounded-2xl bg-green-500 py-4 text-base font-black text-white transition hover:scale-[1.01]">
+              Finalizar pedido no WhatsApp
+            </button>
           </aside>
         </div>
       </section>
@@ -451,18 +581,34 @@ export default function App() {
             <div>
               <p className="mb-2 text-sm font-bold uppercase tracking-[0.25em] text-orange-400">Dogão do Tigrão</p>
               <h2 className="text-3xl font-black md:text-4xl">Pedido rápido e direto no WhatsApp.</h2>
-              <p className="mt-4 max-w-xl text-white/70">Agora com categorias organizadas para o cliente escolher melhor entre hot dogs e lanches separados por catálogo.</p>
+              <p className="mt-4 max-w-xl text-white/70">
+                Agora com categorias organizadas para o cliente escolher melhor entre tradicional, especial, calabresa e lanches.
+              </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
-              <div className="rounded-3xl bg-black/20 p-5"><div className="text-sm text-white/60">WhatsApp</div><div className="mt-2 text-lg font-bold">(34) 99978-3791</div></div>
-              <div className="rounded-3xl bg-black/20 p-5"><div className="text-sm text-white/60">Funcionamento</div><div className="mt-2 text-lg font-bold">Seg a Qui: 19h às 23h</div></div>
-              <div className="rounded-3xl bg-black/20 p-5 sm:col-span-2"><div className="text-sm text-white/60">Fim de semana</div><div className="mt-2 text-lg font-bold">Sex a Dom: 19h às 00:00</div></div>
+              <div className="rounded-3xl bg-black/20 p-5">
+                <div className="text-sm text-white/60">WhatsApp</div>
+                <div className="mt-2 text-lg font-bold">(34) 99978-3791</div>
+              </div>
+              <div className="rounded-3xl bg-black/20 p-5">
+                <div className="text-sm text-white/60">Funcionamento</div>
+                <div className="mt-2 text-lg font-bold">Seg a Qui: 19h às 23h</div>
+              </div>
+              <div className="rounded-3xl bg-black/20 p-5 sm:col-span-2">
+                <div className="text-sm text-white/60">Fim de semana</div>
+                <div className="mt-2 text-lg font-bold">Sex a Dom: 19h às 00:00</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <button onClick={() => document.getElementById("cart-panel")?.scrollIntoView({ behavior: "smooth", block: "start" })} className="fixed bottom-6 right-6 rounded-full bg-green-500 px-6 py-4 text-sm font-black text-white shadow-2xl transition hover:scale-105">Carrinho ({cartCount})</button>
+      <button
+        onClick={() => document.getElementById("cart-panel")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+        className="fixed bottom-6 right-6 rounded-full bg-green-500 px-6 py-4 text-sm font-black text-white shadow-2xl transition hover:scale-105"
+      >
+        Carrinho ({cartCount})
+      </button>
     </div>
   );
 }
