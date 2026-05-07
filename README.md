@@ -1,9 +1,22 @@
-# Dogão do Tigrão
+# 🌭 Dogão do Tigrão
 
-Versão pronta para GitHub Pages.
+Cardápio online do Dogão do Tigrão com pedido via WhatsApp.
 
-Base configurada:
-`/dogaodotigraoloja/`
+## Como rodar localmente
 
-Suba todos os arquivos extraídos para o repositório e ative:
-Settings > Pages > GitHub Actions
+```bash
+npm install
+npm run dev
+```
+
+## Como fazer o build
+
+```bash
+npm run build
+```
+
+## Tecnologias
+
+- React 18
+- Vite
+- Tailwind CSS v4
