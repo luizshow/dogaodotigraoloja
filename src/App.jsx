@@ -89,10 +89,10 @@ export default function App() {
     { id: 61, name: "X.hambúrguer bacon salada", category: "Hambúrguer", price: 32, image: `${base}images/o-brabo.jpg`, description: "Pão, hambúrguer, queijo, bacon e salada.", badge: "Lanche" },
     { id: 62, name: "X.hambúrguer tudo", category: "Hambúrguer", price: 38, image: `${base}images/o-brabo-especial.jpg`, description: "Pão, hambúrguer, queijo, ovo, salsinha, bacon e salada.", badge: "Especial" },
 
-    { id: 63, name: "Hot dog simples", category: "Diversos", price: 20, image: `${base}images/hotdog-simples.jpg`, description: "Pão, salsicha, milho, batata e salada.", badge: "Diversos" },
-    { id: 64, name: "Hot dog especial", category: "Diversos", price: 24, image: `${base}images/hotdog-especial.jpg`, description: "Pão, salsicha, ovo, presunto, mussarela, milho, batata e salada.", badge: "Diversos" },
-    { id: 65, name: "Misto quente", category: "Diversos", price: 27, image: `${base}images/misto-quente.jpg`, description: "Pão, presunto e mussarela.", badge: "Diversos" },
-    { id: 66, name: "Bacar", category: "Diversos", price: 27, image: `${base}images/bacar.jpg`, description: "Pão, presunto, mussarela, batata, milho, ovo e salada.", badge: "Diversos" },
+    { id: 63, name: "Hot dog simples", category: "Diversos", price: 18, image: `${base}images/hotdog-simples.jpg`, description: "Pão, salsicha, milho, batata e salada.", badge: "Diversos" },
+    { id: 64, name: "Hot dog especial", category: "Diversos", price: 20, image: `${base}images/hotdog-especial.jpg`, description: "Pão, salsicha, ovo, presunto, mussarela, milho, batata e salada.", badge: "Diversos" },
+    { id: 65, name: "Misto quente", category: "Diversos", price: 25, image: `${base}images/misto-quente.jpg`, description: "Pão, presunto e mussarela.", badge: "Diversos" },
+    { id: 66, name: "Bacar", category: "Diversos", price: 25, image: `${base}images/bacar.jpg`, description: "Pão, presunto, mussarela, batata, milho, ovo e salada.", badge: "Diversos" },
   ];
 
   const featured = products.find((product) => product.name === "O Brabo") || products[0];
