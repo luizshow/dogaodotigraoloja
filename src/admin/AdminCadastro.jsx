@@ -7,6 +7,7 @@ export default function AdminCadastro() {
   const [form, setForm] = useState({ nome: "", email: "", telefone: "", senha: "", confirmar: "" });
   const [erro, setErro] = useState("");
   const [loading, setLoading] = useState(false);
+  const [aguardandoEmail, setAguardandoEmail] = useState(false);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -32,25 +33,64 @@ export default function AdminCadastro() {
     });
 
     if (error) {
-      setErro(error.message === "User already registered"
-        ? "Este e-mail já está cadastrado."
-        : "Erro ao criar conta. Tente novamente.");
+      setErro(
+        error.message === "User already registered"
+          ? "Este e-mail já está cadastrado."
+          : "Erro ao criar conta: " + error.message
+      );
       setLoading(false);
       return;
     }
 
     // Salvar dados extras na tabela admins
-    await supabase.from("admins").insert({
-      id: data.user.id,
-      nome: form.nome,
-      email: form.email,
-      telefone: form.telefone,
-      senha_hash: "managed_by_supabase_auth",
-    });
+    if (data.user) {
+      await supabase.from("admins").insert({
+        id: data.user.id,
+        nome: form.nome,
+        email: form.email,
+        telefone: form.telefone,
+        senha_hash: "managed_by_supabase_auth",
+      });
+    }
 
-    navigate("/admin/dashboard");
     setLoading(false);
+
+    // Se há sessão ativa, confirmação de e-mail está desativada — vai direto pro dashboard
+    if (data.session) {
+      navigate("/admin/dashboard");
+    } else {
+      // Supabase enviou e-mail de confirmação — avisar o usuário
+      setAguardandoEmail(true);
+    }
   };
+
+  if (aguardandoEmail) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-neutral-950 px-4">
+        <div className="w-full max-w-md text-center">
+          <div className="text-6xl mb-4">📧</div>
+          <h2 className="text-2xl font-black text-white mb-3">Confirme seu e-mail</h2>
+          <p className="text-neutral-400 mb-2">
+            Enviamos um link de confirmação para:
+          </p>
+          <p className="text-orange-400 font-bold mb-6">{form.email}</p>
+          <p className="text-neutral-500 text-sm mb-8">
+            Após confirmar o e-mail, volte aqui e faça login.
+          </p>
+          <Link
+            to="/admin"
+            className="inline-block rounded-2xl bg-orange-500 px-8 py-3 font-bold text-white transition hover:brightness-110"
+          >
+            Ir para o login
+          </Link>
+          <p className="mt-4 text-xs text-neutral-600">
+            Dica: para evitar esse passo, desative a confirmação de e-mail em{" "}
+            <span className="text-neutral-400">Authentication → Providers → Email</span> no Supabase.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-neutral-950 px-4 py-10">
